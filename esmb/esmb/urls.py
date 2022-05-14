@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns += [
-    path('captcha/', include('captcha.urls')),
-]
+
+# confirm to delete ?
+""" urlpatterns += [
+    path('captcha/', include('captcha.urls')), 
+] """
