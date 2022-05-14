@@ -1,0 +1,298 @@
+<!--Design by foolishdeveloper.com-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Club ESM Bejaia</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- logos -->
+    <link href="../../static/img/logo.png" rel="icon">
+    <link href="../../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="../../static/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="../../static/css/style.css" rel="stylesheet"><meta charset="utf-8">
+ <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+ #header{
+  background-color: transparent;
+ 
+ }
+.sexe-class , .file-class{
+  padding-top:10px;
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  color: #e0d2d2;
+  border: 1px solid rgba(255, 255, 255, 0.438);
+  border-radius: 8px;
+  background: rgba(105, 105, 105, 0);}
+
+body{
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-image: url("../../static/img/inscription-background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+ 
+
+  
+}
+
+.content{
+  /*width: 330px;*/
+ 
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin-top: 100px;
+  box-shadow: -3px -3px 9px #aaa9a9a2,
+              3px 3px 7px rgba(147, 149, 151, 0.671);
+ 
+}
+
+
+.content .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: rgb(247, 233, 233);
+}
+
+.content .field{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top:10px;
+  
+}
+
+.field input{
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  color: #e0d2d2;
+  border: 1px solid rgba(255, 255, 255, 0.438);
+  border-radius: 8px;
+  background: rgba(105, 105, 105, 0);
+ 
+}
+
+
+.field input::placeholder{
+  color: #e0d2d2a6;
+}
+
+.field span{
+  position: absolute;
+  width: 50px;
+  line-height: 50px;
+  color: #ffffff;
+}
+.extrait-class{
+  display:none;
+}
+.image-class{
+  display:none;
+}
+.scan-2-class{
+  display:none;
+}
+.scan-3-class{
+  display:none;
+}
+input[type=submit]{
+  margin: 25px 0 0 0;
+  width: 100%;
+  height: 50px;
+  color: rgb(238, 226, 226);
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.438);
+  border-radius: 8px;
+  background: rgba(105, 105, 105, 0);
+ margin-top: 30px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+ 
+}
+ 
+.content .or{
+  color: rgba(255, 255, 255, 0.733);
+  margin-top: 9px;
+}
+ 
+.icon-button{
+  margin-top: 15px;
+}
+.icon-button span{
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+   color: rgba(244, 247, 250, 0.795);
+ border-radius: 5px;
+  line-height: 30px;
+  background: rgba(255, 255, 255, 0.164);
+    backdrop-filter: blur(10px);
+}
+.icon-button span.facebook{
+  margin-right: 17px;
+
+}
+input[type=submit]:hover,
+.icon-button span:hover{
+  background-color: #babecc8c;
+}
+
+    </style>
+</head>
+<body>
+    <header id="header" class="fixed-top d-flex align-items-center ">
+        <div class="container d-flex justify-content-between align-items-center">
+    
+          <div id="logo">
+            <!--<a href="index.html"><img src="../../static/img/logo.png" alt=""></a>-->
+            <!-- Uncomment below if you prefer to use a text logo -->
+            <h1><a href="{% url 'index'%}">ESM Bejaia</a></h1>
+          </div>
+    
+              <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto" href="{% url 'index'%}">Accueil</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'club'%}">Le Club</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'galerie'%}">Galerie</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'news'%}">Actualités</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'talents'%}">Nos Talents</a></li>
+            
+            <li><a class="nav-link scrollto" href="{% url 'index'%}#contact">Contact</a></li>
+            
+            <li><a class="nav-link scrollto active" href="{% url 'inscription'%}">Inscription</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+    
+        </div>
+      </header><!-- End Header -->
+  
+<main id="main">
+    {% if pas_encore_message %}
+      <div  style="margin-top:200px;" class="content">
+          <p>
+              <h3  style="color: white">{{pas_encore_message}}</h2>
+          </p>
+      </div>
+    {% else %}
+<div class="content">
+ <div class="text">Formulaire</div>
+  <form action="{% url 'inscription'%}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="field">
+      <span class="fa fa-user"></span>
+      {{form.name}}
+    </div>
+    <div class="field">
+        <span class="fa fa-user"></span>
+        {{form.first_name}}
+    </div>
+    <div class="field">
+        <span class="fa fa-calendar"></span>
+        
+        {{form.date_naissance}}
+    </div>
+    <div class="field">
+        <span class="fa fa-envelope"></span>
+        
+        {{form.email}}
+    </div>
+    <div class="field">
+        <span class="fa fa-mars"></span>
+        <br>
+        {{form.sexe}}
+    </div>
+    <div class="field">
+        <span class="fa fa-phone"></span>
+       <br>
+        {{form.phone}}
+    </div>
+    <div class="field">
+        <span class="fa fa-image"></span>
+        <br>
+        {{form.image}}
+        <label for="image-class" class="file-class">Photo Identité (optionel)</label>
+    </div>
+    <div class="field">
+        <span class="fa fa-file"></span>
+        <br>
+        {{form.scan_1}}
+        <label for="extrait-class" class="file-class">Extrait de naissance *</label>
+    </div>
+    <div class="field">
+        <span class="fa fa-file"></span>
+        <br>
+        {{form.scan_2}}
+        <label for="scan-2-class" class="file-class">Certificat Médical *</label>
+    </div>
+    <div class="field">
+        <span class="fa fa-file"></span>
+        <br>
+        {{form.scan_3}}
+        <label for="scan-3-class" class="file-class">Autre scan (optionel)</label>
+    </div>
+    <h5 style="color: #e0d2d2;;margin-bottom: 0">_ Les scans et images doivent etre renommés :(NOM-PRENOM.exemple)</h5>
+    <input type="submit"></p>
+    
+  </form>
+</div>
+{% endif %}
+
+</main><!-- End #main -->
+
+  
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../../static/vendor/purecounter/purecounter.js"></script>
+<script src="../../static/vendor/aos/aos.js"></script>
+<script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../static/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../../static/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../static/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="../../static/js/main.js"></script>
+
+</body>
+</html>

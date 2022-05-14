@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Actualités</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- logos -->
+  <link href="../../static/img/logo.png" rel="icon">
+  <link href="../../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Regna - v4.7.0
+  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+      <div class="container d-flex justify-content-between align-items-center">
+  
+        <div id="logo">
+          <!--<a href="index.html"><img src="../../static/img/logo.png" alt=""></a>-->
+          <!-- Uncomment below if you prefer to use a text logo -->
+          <h1><a href="{% url 'index'%}">ESM Bejaia</a></h1>
+        </div>
+  
+            <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="{% url 'index'%}">Accueil</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'club'%}">Le Club</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'galerie'%}">Galerie</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'news'%}">Actualités</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'talents'%}">Nos Talents</a></li>
+          
+          <li><a class="nav-link scrollto" href="{% url 'index'%}#contact">Contact</a></li>
+          
+          <li><a class="nav-link scrollto" href="{% url 'inscription'%}">Inscription</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+  
+      </div>
+    </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs" style="background-color: white">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Actualités</h2>
+          <ol>
+            <li><a href="{% url 'index'%}">Acceuil</a></li>
+            <li><a href="{% url 'news'%}">Actualités</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <!--<section class="inner-page pt-4">
+      <div class="container">
+        <p>
+          {% for actu in actus %}
+          <h3>{{actu.title}}</h3>
+          {% endfor %}
+        </p>
+      </div>
+    </section>-->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Actualités</h3>
+          <p class="section-description">On vous tient au <b>Courant</b> !</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Tout</li>
+              <li data-filter=".filter-C">Competition</li>
+              <li data-filter=".filter-B">Blogs</li>
+              <li data-filter=".filter-N">Actualités</li>
+            </ul>
+          </div>
+        </div>
+        {% if actus_non_vide %}
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          {% for actu in actus %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{actu.type_event}}">
+            <img src="{{actu.image.url}}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{actu.title}}</h4>
+              <p>{{actu.text}}</p>
+              <a href="{{actu.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{actu.title}}"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'news'%}{{actu.id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}
+        <div class="section-header"><br><h4 class="section-description">Aucune Publication Pour Le Moment ...</h4></div>>
+        {% endif %}
+      </div>
+    </div>
+    </section><!-- End Portfolio Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+    <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Esmb</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+        -->
+        Conception & Réalisation : <a href="https://www.linkedin.com/in/nassim-benslimane/">Benslimane</a> <a href="https://bootstrapmade.com/">Abdelfettah</a> <a href="https://bootstrapmade.com/">Mansouri</a> <a href="https://bootstrapmade.com/">Hamrani</a> <a href="https://bootstrapmade.com/">Rezig</a> <a href="https://bootstrapmade.com/">Bellahsene</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../static/vendor/purecounter/purecounter.js"></script>
+  <script src="../../static/vendor/aos/aos.js"></script>
+  <script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../static/js/main.js"></script>
+
+</body>
+
+</html>
