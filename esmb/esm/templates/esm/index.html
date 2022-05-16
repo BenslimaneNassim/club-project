@@ -191,11 +191,11 @@
 
           {% for actu in actus %}
           <div class="col-lg-4 col-md-6 portfolio-item filter-{{actu.type_event}}">
-            <img src="{{actu.image.url}}" class="img-fluid" alt="">
+            <img src="{% if actu.image %}{{actu.image.url}}{% else %}../../static/img/logo.png{% endif %}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>{{actu.title}}</h4>
               <p>{{actu.text}}</p>
-              <a href="{{actu.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{actu.title}}"><i class="bx bx-plus"></i></a>
+              {% if actu.image %}<a href="{{actu.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{actu.title}}"><i class="bx bx-plus"></i></a>{% endif %}
               <a href="actualités/{{actu.id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
