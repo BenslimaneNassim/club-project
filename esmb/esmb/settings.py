@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'esm',
     'phonenumber_field',
-    'captcha',
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'esm/static/img/')
 MEDIA_URL = '/img/'
