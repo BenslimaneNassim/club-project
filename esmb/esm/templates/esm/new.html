@@ -106,7 +106,7 @@
           <h3 class="section-title">{{actu.title}}</h3><br>
           <div class="">
             <div>
-              {% if actu.image.url %}<img class="image-news"src="{{actu.image.url}}">{% endif %}
+              {% if actu.image %}<img class="image-news"src="{{actu.image.url}}">{% endif %}
               <p class="section-description" style="color:black">{{actu.text}}</p>
               <h8 style="float : right">{{actu.upload_date}}</h8>
             </div>
