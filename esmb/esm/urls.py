@@ -13,4 +13,5 @@ urlpatterns = [
     path("talents/coachs/<int:coach_id>",views.coach,name="coach"),
     path("talents/athletes/<int:athlete_id>",views.athlete,name="athlete"),
     path("galerie/",views.galerie,name="galerie"),
+    path("credit/",views.credit,name="credit"),
 ]

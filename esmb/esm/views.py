@@ -124,4 +124,6 @@ def galerie(request):
     context={'photos':photos}
     return render(request,"esm/galery.html",context)
 
+def credit(request):
+    return render(request,"esm/credit.html",{})
 # Create your views here.
