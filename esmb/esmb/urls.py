@@ -19,12 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('',include('esm.urls')),
     path('esm/',include('esm.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
-# confirm to delete ?
-""" urlpatterns += [
-    path('captcha/', include('captcha.urls')), 
-] """
