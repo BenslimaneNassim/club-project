@@ -9,12 +9,15 @@
     color: rgba(99,99,99,0.9);
     background: url("../img/hj.png") center / cover no-repeat;
     opacity: 1;
-    text-shadow: 0px 0px 20px rgba(0,0,0,0.9);
+    /*text-shadow: 0px 0px 20px rgba(0,0,0,0.9);*/
   }
+}
+.fit-cover {
+  object-fit: cover;
 }
 
 .navbar-brand {
-  background: url("../../assets/img/Calque%201%20(4)@2x.png") center / cover no-repeat;
+  background: url("../img/Calque%201%20(4)@2x.png") center / cover no-repeat;
 }
 
 #LOZ {
@@ -56,9 +59,6 @@ img {
 .P {
   font-size: 52px;
   text-align: center;
-}
-
-.fffff {
 }
 
 .fond {
@@ -121,7 +121,3 @@ img {
   width: 100%;
   margin-bottom: 10px;
 }
-
-.gdfg {
-}
-
