@@ -64,7 +64,7 @@ def inscription(request):
         pas_de_periode = "Pas de période d'inscription pour l'instant"
         context={'pas_de_periode':pas_de_periode}
         return render(request,"esm/inscriptions.html",context)
-    if (periode.debut <= maintenant and periode.fin >= maintenant):
+    elif (periode.debut <= maintenant and periode.fin >= maintenant):
         form = InscriptionForm()
         if request.method =='POST':
             form = InscriptionForm(request.POST,request.FILES)
