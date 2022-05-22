@@ -212,6 +212,12 @@ input[type=submit]:hover,
               <h3  style="color: white">{{pas_encore_message}}</h2>
           </p>
       </div>
+    {% elif pas_de_periode %}
+    <div  style="margin-top:200px;" class="content">
+      <p>
+          <h3  style="color: white">{{pas_de_periode}}</h2>
+      </p>
+    </div>
     {% else %}
 <div class="content">
  <div class="text">Formulaire</div>

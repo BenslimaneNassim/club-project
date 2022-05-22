@@ -1071,6 +1071,113 @@ section {
 #contact .php-email-form button[type=submit]:hover {
   background: #51d8ad;
 }
+
+
+.contact {
+  background: #f7f7f7;
+  padding: 80px 0 40px 0;
+}
+.contact #google-map {
+  height: 300px;
+  margin-bottom: 20px;
+}
+.contact .info {
+  color: #333333;
+}
+.contact .info i {
+  font-size: 32px;
+  color: #50dcf3;
+  float: left;
+  line-height: 0;
+}
+.contact .info p {
+  padding: 0 0 10px 50px;
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-size: 14px;
+}
+.contact .info .email p {
+  padding-top: 5px;
+}
+.contact .social-links {
+  padding: 20px 0;
+}
+.contact .social-links a {
+  font-size: 18px;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .social-links a i {
+  line-height: 0;
+}
+.contact .social-links a:hover {
+  background: #50dcf3;
+  color: #fff;
+}
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+.contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
+  background-color: #50dcf3;
+}
+.contact .php-email-form button[type=submit] {
+  background: #50dcf3;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+.contact .php-email-form button[type=submit]:hover {
+  background: #51d8ad;
+}
 @-webkit-keyframes animate-loading {
   0% {
     transform: rotate(0deg);

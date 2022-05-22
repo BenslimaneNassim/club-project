@@ -85,18 +85,18 @@
     </section><!-- End Breadcrumbs Section -->
 
     
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio" style="min-height: 500px">
         <div class="container" data-aos="fade-up">
           <div class="section-header">
             <h3 class="section-title">Galerie</h3>
-            <p class="section-description">On vous fait <b>Plongez</b> dans notre univers !</p>
+            <p class="section-description">On vous fait <b>Plonger</b> dans notre univers !</p>
           </div>
   
           
           
   
           <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-  
+            {% if photos %}
             {% for photo in photos %}
             <div class="col-lg-4 col-md-6 portfolio-item filter-{{photo.type_event}}">
               <img src="{{photo.image.url}}" class="img-fluid" alt="">
@@ -107,6 +107,9 @@
               </div>
             </div>
             {% endfor %}
+            {% else %}
+            <div class="section-header"><br><h4 class="section-description">Aucune Photo Pour Le Moment ...</h4></div>
+            {% endif %}
           </div>
           
         </div>

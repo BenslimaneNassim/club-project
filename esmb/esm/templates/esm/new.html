@@ -108,7 +108,7 @@
           <div class="">
             <div>
               {% if actu.image %}<img class="image-news"src="{{actu.image.url}}">{% endif %}
-              <p class="section-description" style="color:black">{{actu.text}}</p>
+              {% if actu.text %}<p class="section-description" style="color:black">{{actu.text|linebreaks}}</p>{% endif %}
               <h8 style="float : right">{{actu.upload_date}}</h8>
             </div>
            </div>

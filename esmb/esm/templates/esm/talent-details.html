@@ -119,7 +119,7 @@
             {% if talent.description %}<div class="portfolio-description">
               <h2>Description {% if talent_category == "Coach" %}Du Coach{% else %}De l'Athlète{% endif %}</h2>
               <p>
-                {{talent.description}}
+                {{talent.description|linebreaks}}
               </p>
             </div>{% endif %}
           </div>
